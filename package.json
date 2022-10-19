@@ -1,0 +1,24 @@
+{
+  "name": "eventhandler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothymei327/EventHandler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timothymei327/EventHandler/issues"
+  },
+  "homepage": "https://github.com/timothymei327/EventHandler#readme",
+  "dependencies": {
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20"
+  }
+}
