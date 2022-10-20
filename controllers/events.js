@@ -15,8 +15,16 @@ const createEvent = async (req, res) => {
   res.send(newEvent)
 }
 
+const updateEvent = async (req, res) => {
+  let update = await Event.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+  res.send(update)
+}
+
 module.exports = {
   getAllEvents,
   getOneEvent,
-  createEvent
+  createEvent,
+  updateEvent
 }

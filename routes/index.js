@@ -6,6 +6,7 @@ const router = Router()
 router.get('/events', events.getAllEvents)
 router.get('/events/:id', events.getOneEvent)
 router.post('/events', events.createEvent)
+router.put('/events/:id', events.updateEvent)
 
 //notes routes
 //task routes
