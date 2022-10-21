@@ -10,7 +10,21 @@ const getOneTask = async (req, res) => {
   res.send(task)
 }
 
+const createTask = async (req, res) => {
+  let newTask = await Task.create(req.body)
+  res.send(newTask)
+}
+
+const updateTask = async (req, res) => {
+  let update = await Task.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+  res.send(update)
+}
+
 module.exports = {
   getAllTasks,
-  getOneTask
+  getOneTask,
+  createTask,
+  updateTask
 }
