@@ -22,9 +22,15 @@ const updateTask = async (req, res) => {
   res.send(update)
 }
 
+const deleteTask = async (req, res) => {
+  let taskToDelete = await Task.findByIdAndDelete(req.params.id)
+  res.send(taskToDelete)
+}
+
 module.exports = {
   getAllTasks,
   getOneTask,
   createTask,
-  updateTask
+  updateTask,
+  deleteTask
 }
