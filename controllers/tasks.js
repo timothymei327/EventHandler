@@ -5,6 +5,12 @@ const getAllTasks = async (req, res) => {
   res.send(tasks)
 }
 
+const getOneTask = async (req, res) => {
+  let task = await Task.findById(req.params.id)
+  res.send(task)
+}
+
 module.exports = {
-  getAllTasks
+  getAllTasks,
+  getOneTask
 }

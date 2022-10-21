@@ -11,5 +11,6 @@ router.delete('/events:id', events.deleteEvent)
 
 //task routes
 router.get('/tasks', tasks.getAllTasks)
+router.get('/tasks/:id', tasks.getOneTask)
 
 module.exports = router
