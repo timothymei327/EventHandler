@@ -1,12 +1,12 @@
 const { Event } = require('../models')
 
 const getAllEvents = async (req, res) => {
-  let events = await Event.find({}).populate('notes')
+  let events = await Event.find({})
   res.send(events)
 }
 
 const getOneEvent = async (req, res) => {
-  let event = await Event.findById(req.params.id).populate('notes')
+  let event = await Event.findById(req.params.id)
   res.send(event)
 }
 
@@ -22,9 +22,15 @@ const updateEvent = async (req, res) => {
   res.send(update)
 }
 
+const deleteEvent = async (req, res) => {
+  let eventToDelete = await Event.deleteOne({ id: req.params.id })
+  res.send(eventToDelete)
+}
+
 module.exports = {
   getAllEvents,
   getOneEvent,
   createEvent,
-  updateEvent
+  updateEvent,
+  deleteEvent
 }

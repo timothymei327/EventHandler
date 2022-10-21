@@ -6,7 +6,7 @@ const eventSchema = new Schema(
     date: { type: Date, required: true },
     location: { type: String },
     description: { type: String },
-    notes: [{ type: Schema.Types.ObjectId, ref: 'Note' }]
+    notes: [{ type: String }]
   },
   { timestamps: true }
 )
