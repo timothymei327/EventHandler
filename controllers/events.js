@@ -23,7 +23,7 @@ const updateEvent = async (req, res) => {
 }
 
 const deleteEvent = async (req, res) => {
-  let eventToDelete = await Event.deleteOne({ id: req.params.id })
+  let eventToDelete = await Event.deleteOne({ _id: req.params.id })
   res.send(eventToDelete)
 }
 
